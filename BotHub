@@ -1,21 +1,172 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BotHub</title>
-</head>
-<body>
-    local HWID =  {
-        "f990bbc0-a32c-4ad2-8992-99b31a2d0dc3","",""
-    }
-    if HWID[table.find(HWID,game:GetService("RbxAnalyticsService"):GetClientId())] == game:GetService("RbxAnalyticsService"):GetClientId() then
-        _G.script = true
-        loadstring(game:HttpGet("https://ybothub.000webhostapp.com/YBotHub"))()
-    else
-        game.Players.LocalPlayer:Kick("Hwid error Please reset Hwid")
-        wait(3)
-        game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+_G.AutoFram = true
+function WarpTween(P)
+    local Pos = (P.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+    local tween_Service = game:service"TweenService"
+    local tween_info = TweenInfo.new(Pos/300, Enum.EasingStyle.Linear)
+    local Warps = tween_Service:Create(game:GetService("Players").LocalPlayer.Character["HumanoidRootPart"], tween_info, {CFrame = P})
+    Warps:Play()
+    if Pos <= 50 then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P
     end
-</body>
-</html>
+end
+function Warp(Y)
+    game.Players.localPlayer.Character.HumanoidRootPart.CFrame = Y
+end
+function checklevel()
+	local Level = game:GetService("Players").LocalPlayer.Data.Level.Value
+	if Level == 1 or Level <= 9 then
+        Mon = "Bandit"
+        Title = "Bandit"
+        QuestName = "BanditQuest1"
+        QuestNumber = 1
+        CFrameQuest = CFrame.new(1059.96899, 17.0475254, 1549.3396, -0.929264307, 4.23960245e-09, 0.369415551, 1.78822568e-10, 1, -1.10266853e-08, -0.369415551, -1.01806457e-08, -0.929264307)
+        CFramePuk = CFrame.new(1098.90247, 67.0395203, 1616.08984, 0.0688105226, 1.89194598e-08, -0.997629762, -2.03779624e-08, 1, 1.7558861e-08, 0.997629762, 1.9121428e-08, 0.0688105226)
+        CFramMon1 = CFrame.new(935.582031, 16.3750439, 1517.27185, -0.675105989, -7.03842895e-09, -0.737720728, 1.13591927e-08, 1, -1.99358468e-08, 0.737720728, -2.18387228e-08, -0.675105989)
+        CFramMon2 = CFrame.new(954.708618, 16.2993793, 1632.86426, 0.773119092, -1.02012315e-07, -0.634260893, 8.29118108e-08, 1, -5.97728942e-08, 0.634260893, -6.37615294e-09, 0.773119092)
+        CFramMon3 = CFrame.new(1022.7771, 16.2993107, 1566.09631, 0.671453118, 7.1352062e-08, 0.741047084, -7.07419057e-09, 1, -8.9875634e-08, -0.741047084, 5.51049659e-08, 0.671453118)
+        CFramMon4 = CFrame.new(1100.4812, 16.2993984, 1592.11646, -0.235393152, -3.8992745e-08, -0.971900225, -5.3388888e-08, 1, -2.71893832e-08, 0.971900225, 4.5488477e-08, -0.235393152)
+        CFramMon5 = CFrame.new(1121.46863, 16.2993984, 1666.82947, 0.166449696, -4.57003928e-08, -0.98604995, -5.72729109e-09, 1, -4.73137298e-08, 0.98604995, 1.35227509e-08, 0.166449696)
+        CFramMon6 = CFrame.new(1218.45911, 16.2993641, 1681.47607, 0.916527689, -4.47030368e-09, 0.399971277, -1.13528218e-08, 1, 3.719137e-08, -0.399971277, -3.86277215e-08, 0.916527689)
+        CFramMon7 = CFrame.new(1285.15662, 16.2993603, 1628.08948, 0.815063596, -2.98914564e-08, 0.579371512, 3.84428418e-08, 1, -2.48873899e-09, -0.579371512, 2.43011691e-08, 0.815063596)
+        CFramMon8 = CFrame.new(1231.33044, 16.2993984, 1539.56787, -0.920429707, -2.32371615e-08, -0.390908182, 9.1229504e-09, 1, -8.09248775e-08, 0.390908182, -7.80518974e-08, -0.920429707)
+        CFramMon9 = CFrame.new(1231.33044, 16.2993984, 1539.56787, -0.920429707, -2.32371615e-08, -0.390908182, 9.1229504e-09, 1, -8.09248775e-08, 0.390908182, -7.80518974e-08, -0.920429707)
+        CFramMon10 = CFrame.new(1331.78699, 16.2993412, 1493.8031, -0.901221573, 9.8148071e-08, 0.43335858, 5.52090818e-08, 1, -1.11668385e-07, -0.43335858, -7.67126238e-08, -0.901221573)
+    elseif Level == 10 or Level <= 14 then
+        Mon = "Monkey"
+        Title = Mon
+        QuestName = "JungleQuest"
+        QuestNumber = 1
+        CFrameQuest = CFrame.new(-1599.23096, 37.8653831, 153.335953, -0.0493941903, 1.29583286e-08, 0.998779356, 3.21716165e-08, 1, -1.13831318e-08, -0.998779356, 3.15700852e-08, -0.0493941903)
+        CFramMon1 = CFrame.new(-1577.5863, 22.8777866, 375.372864, 0.999042809, -2.3482297e-08, -0.0437435545, 2.38412614e-08, 1, 7.68439712e-09, 0.0437435545, -8.71994299e-09, 0.999042809)
+        CFramMon2 = CFrame.new(-1804.01611, 22.8777943, 106.698814, 0.392446876, -1.32022899e-08, -0.919774652, -4.60039384e-09, 1, -1.63167133e-08, 0.919774652, 1.06347695e-08, 0.392446876)
+        CFramMon3 = CFrame.new(-1743.78821, 22.8778706, -95.8805466, -0.976141393, 2.12467768e-08, -0.217135876, 4.73960355e-08, 1, -1.15220281e-07, 0.217135876, -1.22762671e-07, -0.976141393)
+        CFramMon4 = CFrame.new(-1607.15906, 22.877306, -51.7425423, -0.857982874, 2.40566767e-08, 0.513678312, 3.15042143e-08, 1, 5.78844261e-09, -0.513678312, 2.11494147e-08, -0.857982874)
+        CFramMon5 = CFrame.new(-1478.24121, 22.8778896, 91.5866013, -0.493188769, -5.6208517e-08, 0.86992234, -8.67646079e-08, 1, 1.54234296e-08, -0.86992234, -6.78718095e-08, -0.493188769)
+        CFramMon6 = CFrame.new(-1200.19885, 11.8778315, 280.441162, 0.277341962, -6.02083929e-08, 0.960771263, 2.80793184e-08, 1, 5.4561184e-08, -0.960771263, 1.1845696e-08, 0.277341962)
+        CFramMon7 = CFrame.new(-1293.22363, 11.8778315, -7.83187485, -0.414781868, -2.35199082e-09, 0.909920871, 2.39913138e-08, 1, 1.35211238e-08, -0.909920871, 2.74385155e-08, -0.414781868)
+        CFramMon8 = CFrame.new(-1577.5863, 22.8777866, 375.372864, 0.999042809, -2.3482297e-08, -0.0437435545, 2.38412614e-08, 1, 7.68439712e-09, 0.0437435545, -8.71994299e-09, 0.999042809)
+        CFramMon9 = CFrame.new(-1804.01611, 22.8777943, 106.698814, 0.392446876, -1.32022899e-08, -0.919774652, -4.60039384e-09, 1, -1.63167133e-08, 0.919774652, 1.06347695e-08, 0.392446876)
+        CFramMon10 = CFrame.new(-1743.78821, 22.8778706, -95.8805466, -0.976141393, 2.12467768e-08, -0.217135876, 4.73960355e-08, 1, -1.15220281e-07, 0.217135876, -1.22762671e-07, -0.976141393)
+    elseif Level == 15 or Level <= 29 then
+        Mon = "Gorilla"
+        Title = Mon
+        QuestName = "JungleQuest"
+        QuestNumber = 2
+        CFrameQuest = CFrame.new(-1599.23096, 37.8653831, 153.335953, -0.0493941903, 1.29583286e-08, 0.998779356, 3.21716165e-08, 1, -1.13831318e-08, -0.998779356, 3.15700852e-08, -0.0493941903)
+        CFramMon1 = CFrame.new(-1398.03064, 14.8956623, 4180.69189, 0.286105543, 3.21045697e-08, -0.95819813, 2.39228815e-08, 1, 4.06482101e-08, 0.95819813, -3.45525386e-08, 0.286105543)
+        CFramMon2 = CFrame.new(-1228.96765, 15.1156597, 4332.92236, 0.909298778, -3.94709335e-11, -0.416143894, 6.12436157e-10, 1, 1.24335964e-09, 0.416143894, -1.38544698e-09, 0.909298778)
+        CFramMon3 = CFrame.new(-1188.68884, 14.8356619, 4231.88184, 0.895019948, -1.04126583e-08, -0.446026057, 5.30342099e-08, 1, 8.30759035e-08, 0.446026057, -9.8009231e-08, 0.895019948)
+        CFramMon4 = CFrame.new(-1051.5166, 14.8356619, 4398.00879, 0.781269252, -4.50919373e-08, -0.624194145, 7.79518174e-08, 1, 2.5327731e-08, 0.624194145, -6.8444848e-08, 0.781269252)
+        CFramMon5 = CFrame.new(-978.960815, 14.8456621, 4231.83008, 0.781267405, 1.12260397e-08, -0.62419647, -1.21808661e-08, 1, 2.73876211e-09, 0.62419647, 5.46354828e-09, 0.781267405)
+        CFramMon6 = CFrame.new(-1050.69653, 14.8356619, 4399.50732, 0.875937641, 5.27425641e-08, -0.482424378, -6.90015582e-08, 1, -1.59579336e-08, 0.482424378, 4.72661874e-08, 0.875937641)
+        CFramMon7 = CFrame.new(-865.41272, 14.7778215, 4285.38867, -0.0740099549, -2.1665334e-09, 0.997257531, 1.46865986e-08, 1, 3.26243521e-09, -0.997257531, 1.48877737e-08, -0.0740099549)
+        CFramMon8 = CFrame.new(-1398.03064, 14.8956623, 4180.69189, 0.286105543, 3.21045697e-08, -0.95819813, 2.39228815e-08, 1, 4.06482101e-08, 0.95819813, -3.45525386e-08, 0.286105543)
+        CFramMon9 = CFrame.new(-1228.96765, 15.1156597, 4332.92236, 0.909298778, -3.94709335e-11, -0.416143894, 6.12436157e-10, 1, 1.24335964e-09, 0.416143894, -1.38544698e-09, 0.909298778)
+        CFramMon10 = CFrame.new(-1188.68884, 14.8356619, 4231.88184, 0.895019948, -1.04126583e-08, -0.446026057, 5.30342099e-08, 1, 8.30759035e-08, 0.446026057, -9.8009231e-08, 0.895019948)
+    end
+end
+spawn(function()
+    while _G.AutoFram do wait()
+        if game:GetService("Players").localPlayer.PlayerGui.Main.Quest.Visible == false then
+            checklevel()
+            WarpTween(CFrameQuest)
+            wait(2)
+            local args = {
+                [1] = "StartQuest",
+                [2] = QuestName,
+                [3] = QuestNumber
+            }
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        end
+    end
+end)
+spawn(function()
+    while task.wait() do
+        pcall(function()
+            if _G.AutoFram then
+                checklevel()
+                if game:GetService("Players").localPlayer.PlayerGui.Main.Quest.Visible == true then
+                    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                        for i,v2 in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+                            if v.Name == Mon and v2.Name == Mon then
+                                v.HumanoidRootPart.CFrame = v2.HumanoidRootPart.CFrame
+                                WarpTween(v.HumanoidRootPart.CFrame * CFrame.new(0,20,0))
+                                game:GetService'VirtualUser':CaptureController()
+                                game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                game:GetService'VirtualUser':CaptureController()
+                                game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                game:GetService'VirtualUser':CaptureController()
+                                game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                game:GetService'VirtualUser':CaptureController()
+                                game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                game:GetService'VirtualUser':CaptureController()
+                                game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                require(game.ReplicatedStorage.Util.CameraShaker):Stop()
+                                getupvalues(require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework))[2]['activeController'].timeToNextAttack = 0
+                                getupvalues(require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework))[2]['activeController'].hitboxMagnitude = 100
+                                v.HumanoidRootPart.CanCollide = false
+                                v2.HumanoidRootPart.CanCollide = false
+                                sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+                                v.HumanoidRootPart.Size = Vector3.new(150,50,150)
+                                local args = {
+                                    [1] = "Ken",
+                                    [2] = true
+                                }
+                                game:GetService("ReplicatedStorage").Remotes.CommE:FireServer(unpack(args))
+                            else
+                                WarpTween(CFramePuk)
+                                wait(5)
+                                WarpTween(CFramMon1 * CFrame.new(0,20,0))
+                                wait(2)
+                                WarpTween(CFramMon2 * CFrame.new(0,20,0))
+                                wait(2)
+                                WarpTween(CFramMon3 * CFrame.new(0,20,0))
+                                wait(2)
+                                WarpTween(CFramMon4 * CFrame.new(0,20,0))
+                                wait(2)
+                                WarpTween(CFramMon5 * CFrame.new(0,20,0))
+                                wait(2)
+                                WarpTween(CFramMon6 * CFrame.new(0,20,0))
+                                wait(2)
+                                WarpTween(CFramMon7 * CFrame.new(0,20,0))
+                                wait(2)
+                                WarpTween(CFramMon8 * CFrame.new(0,20,0))
+                                wait(2)
+                                WarpTween(CFramMon9 * CFrame.new(0,20,0))
+                                wait(2)
+                                WarpTween(CFramMon10 * CFrame.new(0,20,0))
+                                wait(2)
+                                WarpTween(CFramMon1 * CFrame.new(0,20,0))
+                            end
+                        end
+                    end
+                end
+            end
+        end)
+    end
+end)
+spawn(function()
+    while _G.AutoFram do wait()
+        if not game.Players.LocalPlayer.Character.Humanoid:FindFirstChild("LeftHand_BusoLayer1") then
+            local args = {
+                [1] = "Buso"
+            }
+            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        end
+    end
+end)
+spawn(function()
+	while task.wait() do
+		pcall(function()
+			if _G.AutoFram then
+				checklevel()
+				if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, Title) then
+					local args = {
+						[1] = "AbandonQuest"
+					}
+					game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+				end
+			end
+		end)
+	end
+end)
