@@ -1,0 +1,636 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local TextButt = Instance.new("TextButton")
+local Framebot = Instance.new("ImageLabel")
+local uf = Instance.new("TextLabel")
+local nanescripbot = Instance.new("TextLabel")
+local offx = Instance.new("TextButton")
+local soombot = Instance.new("TextButton")
+local oubot = Instance.new("TextButton")
+local Homebot = Instance.new("TextButton")
+local Frameh1bot = Instance.new("Frame")
+local frambot = Instance.new("TextLabel")
+local autoLevelbot = Instance.new("TextButton")
+local truefalseautoframlevel = Instance.new("TextLabel")
+local autoframlevelbottex = Instance.new("TextLabel")
+local Frameh2bot = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local weaponbothub = Instance.new("TextButton")
+local weaponmaly = Instance.new("TextButton")
+local weapowas = Instance.new("TextButton")
+local autoweaponbot = Instance.new("TextButton")
+local truefalseautoweapon = Instance.new("TextLabel")
+local autoweapontex = Instance.new("TextLabel")
+local Frameh3bot = Instance.new("Frame")
+local setbot = Instance.new("TextButton")
+local Frames2bot = Instance.new("Frame")
+local Frames1bot = Instance.new("Frame")
+local Frames3bot = Instance.new("Frame")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+TextButt.Name = "TextButt"
+TextButt.Parent = ScreenGui
+TextButt.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextButt.BackgroundTransparency = 1.000
+TextButt.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButt.BorderSizePixel = 0
+TextButt.Position = UDim2.new(0.259075046, 0, 0.152083308, 0)
+TextButt.Size = UDim2.new(0.400201648, 0, 0.0416666679, 0)
+TextButt.Font = Enum.Font.SourceSans
+TextButt.Text = ""
+TextButt.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButt.TextSize = 14.000
+
+Framebot.Name = "Framebot"
+Framebot.Parent = ScreenGui
+Framebot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Framebot.BackgroundTransparency = 1.000
+Framebot.Position = UDim2.new(0.246978313, 0, 0.152083308, 0)
+Framebot.Size = UDim2.new(0.50441277, 0, 0.729166746, 0)
+Framebot.ZIndex = 0
+Framebot.Image = "rbxassetid://3570695787"
+Framebot.ImageColor3 = Color3.fromRGB(50, 50, 50)
+Framebot.ScaleType = Enum.ScaleType.Slice
+Framebot.SliceCenter = Rect.new(100, 100, 100, 100)
+Framebot.SliceScale = 0.120
+
+uf.Name = "uf"
+uf.Parent = Framebot
+uf.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uf.BorderColor3 = Color3.fromRGB(0, 0, 0)
+uf.BorderSizePixel = 0
+uf.Position = UDim2.new(0, 0, 0.0799999982, 0)
+uf.Size = UDim2.new(0.99999994, 0, 0.00428571412, 0)
+uf.Font = Enum.Font.SourceSans
+uf.Text = ""
+uf.TextColor3 = Color3.fromRGB(0, 0, 0)
+uf.TextSize = 14.000
+
+nanescripbot.Name = "nanescripbot"
+nanescripbot.Parent = Framebot
+nanescripbot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nanescripbot.BackgroundTransparency = 1.000
+nanescripbot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nanescripbot.BorderSizePixel = 0
+nanescripbot.Position = UDim2.new(-0.00199846085, 0, 0.0614286102, 0)
+nanescripbot.Size = UDim2.new(0.250694036, 0, -0.0585714653, 0)
+nanescripbot.Font = Enum.Font.SourceSans
+nanescripbot.Text = "Bot Hub"
+nanescripbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+nanescripbot.TextScaled = true
+nanescripbot.TextSize = 14.000
+nanescripbot.TextWrapped = true
+
+offx.Name = "offx"
+offx.Parent = Framebot
+offx.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+offx.BackgroundTransparency = 1.000
+offx.BorderColor3 = Color3.fromRGB(0, 0, 0)
+offx.BorderSizePixel = 0
+offx.Position = UDim2.new(0.937292397, 0, 0.00285714259, 0)
+offx.Size = UDim2.new(0.0599547364, 0, 0.0571428537, 0)
+offx.Font = Enum.Font.SourceSans
+offx.Text = "X"
+offx.TextColor3 = Color3.fromRGB(255, 255, 255)
+offx.TextScaled = true
+offx.TextSize = 14.000
+offx.TextWrapped = true
+
+soombot.Name = "soombot"
+soombot.Parent = Framebot
+soombot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+soombot.BackgroundTransparency = 1.000
+soombot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+soombot.BorderSizePixel = 0
+soombot.Position = UDim2.new(0.877337635, 0, 0.00285714259, 0)
+soombot.Size = UDim2.new(0.0599547364, 0, 0.0571428537, 0)
+soombot.Font = Enum.Font.SourceSans
+soombot.Text = "☐"
+soombot.TextColor3 = Color3.fromRGB(255, 255, 255)
+soombot.TextScaled = true
+soombot.TextSize = 14.000
+soombot.TextWrapped = true
+
+oubot.Name = "oubot"
+oubot.Parent = Framebot
+oubot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+oubot.BackgroundTransparency = 1.000
+oubot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+oubot.BorderSizePixel = 0
+oubot.Position = UDim2.new(0.817382932, 0, 0.00285714259, 0)
+oubot.Size = UDim2.new(0.0599547364, 0, 0.0571428537, 0)
+oubot.Font = Enum.Font.SourceSans
+oubot.Text = "-"
+oubot.TextColor3 = Color3.fromRGB(255, 255, 255)
+oubot.TextScaled = true
+oubot.TextSize = 14.000
+oubot.TextWrapped = true
+
+Homebot.Name = "Homebot"
+Homebot.Parent = Framebot
+Homebot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Homebot.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Homebot.Position = UDim2.new(0.0621997379, 0, 0.114285707, 0)
+Homebot.Size = UDim2.new(0.119909473, 0, 0.0571428537, 0)
+Homebot.Font = Enum.Font.SourceSans
+Homebot.Text = "Home"
+Homebot.TextColor3 = Color3.fromRGB(0, 0, 0)
+Homebot.TextScaled = true
+Homebot.TextSize = 14.000
+Homebot.TextWrapped = true
+
+Frameh1bot.Name = "Frameh1bot"
+Frameh1bot.Parent = Homebot
+Frameh1bot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frameh1bot.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frameh1bot.Position = UDim2.new(-0.185389072, 0, 2.05000067, 0)
+Frameh1bot.Size = UDim2.new(3.66666675, 0, 11.500001, 0)
+
+frambot.Name = "frambot"
+frambot.Parent = Frameh1bot
+frambot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+frambot.BackgroundTransparency = 1.000
+frambot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+frambot.BorderSizePixel = 0
+frambot.Size = UDim2.new(1, 0, 0.0652173907, 0)
+frambot.Font = Enum.Font.SourceSans
+frambot.Text = "\\\\  Fram //"
+frambot.TextColor3 = Color3.fromRGB(255, 255, 255)
+frambot.TextScaled = true
+frambot.TextSize = 14.000
+frambot.TextWrapped = true
+
+autoLevelbot.Name = "autoLevelbot"
+autoLevelbot.Parent = Frameh1bot
+autoLevelbot.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+autoLevelbot.BackgroundTransparency = 0.900
+autoLevelbot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+autoLevelbot.BorderSizePixel = 0
+autoLevelbot.Position = UDim2.new(0.131966904, 0, 0.102624103, 0)
+autoLevelbot.Size = UDim2.new(0.733407497, 0, 0.0662271231, 0)
+autoLevelbot.Font = Enum.Font.SourceSansLight
+autoLevelbot.Text = ""
+autoLevelbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+autoLevelbot.TextScaled = true
+autoLevelbot.TextSize = 14.000
+autoLevelbot.TextWrapped = true
+
+truefalseautoframlevel.Name = "truefalseautoframlevel"
+truefalseautoframlevel.Parent = autoLevelbot
+truefalseautoframlevel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+truefalseautoframlevel.BackgroundTransparency = 1.000
+truefalseautoframlevel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+truefalseautoframlevel.BorderSizePixel = 0
+truefalseautoframlevel.Size = UDim2.new(0.191529155, 0, 0.99999994, 0)
+truefalseautoframlevel.Font = Enum.Font.SourceSans
+truefalseautoframlevel.Text = "○"
+truefalseautoframlevel.TextColor3 = Color3.fromRGB(255, 255, 255)
+truefalseautoframlevel.TextScaled = true
+truefalseautoframlevel.TextSize = 14.000
+truefalseautoframlevel.TextWrapped = true
+
+autoframlevelbottex.Name = "autoframlevelbottex"
+autoframlevelbottex.Parent = autoLevelbot
+autoframlevelbottex.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+autoframlevelbottex.BackgroundTransparency = 1.000
+autoframlevelbottex.BorderColor3 = Color3.fromRGB(0, 0, 0)
+autoframlevelbottex.BorderSizePixel = 0
+autoframlevelbottex.Position = UDim2.new(0.188017234, 0, 0, 0)
+autoframlevelbottex.Size = UDim2.new(0.500194907, 0, 0.99999994, 0)
+autoframlevelbottex.Font = Enum.Font.SourceSans
+autoframlevelbottex.Text = "Auto Fram Level"
+autoframlevelbottex.TextColor3 = Color3.fromRGB(255, 255, 255)
+autoframlevelbottex.TextScaled = true
+autoframlevelbottex.TextSize = 14.000
+autoframlevelbottex.TextWrapped = true
+
+Frameh2bot.Name = "Frameh2bot"
+Frameh2bot.Parent = Homebot
+Frameh2bot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frameh2bot.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frameh2bot.Position = UDim2.new(3.88183928, 0, 2.05000067, 0)
+Frameh2bot.Size = UDim2.new(3.66666675, 0, 5.5, 0)
+
+TextLabel.Parent = Frameh2bot
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(1, 0, 0.13636364, 0)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "\\\\  Weapon  //"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+weaponbothub.Name = "weaponbothub"
+weaponbothub.Parent = Frameh2bot
+weaponbothub.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+weaponbothub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+weaponbothub.BorderSizePixel = 0
+weaponbothub.Position = UDim2.new(0.174663931, 0, 0.227272734, 0)
+weaponbothub.Size = UDim2.new(0.643999994, 0, 0.129999995, 0)
+weaponbothub.Font = Enum.Font.SourceSansLight
+weaponbothub.Text = "            Weapon		▼"
+weaponbothub.TextColor3 = Color3.fromRGB(255, 255, 255)
+weaponbothub.TextScaled = true
+weaponbothub.TextSize = 14.000
+weaponbothub.TextWrapped = true
+
+weaponmaly.Name = "weaponmaly"
+weaponmaly.Parent = weaponbothub
+weaponmaly.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+weaponmaly.BorderColor3 = Color3.fromRGB(0, 0, 0)
+weaponmaly.BorderSizePixel = 0
+weaponmaly.Position = UDim2.new(0.00326738413, 0, 1.53446376, 0)
+weaponmaly.Size = UDim2.new(1, 0, 1, 0)
+weaponmaly.Visible = false
+weaponmaly.Font = Enum.Font.SourceSansLight
+weaponmaly.Text = ""
+weaponmaly.TextColor3 = Color3.fromRGB(255, 255, 255)
+weaponmaly.TextScaled = true
+weaponmaly.TextSize = 14.000
+weaponmaly.TextWrapped = true
+
+weapowas.Name = "weapowas"
+weapowas.Parent = weaponbothub
+weapowas.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+weapowas.BorderColor3 = Color3.fromRGB(0, 0, 0)
+weapowas.BorderSizePixel = 0
+weapowas.Position = UDim2.new(0.00337261963, 0, 2.99981403, 0)
+weapowas.Size = UDim2.new(1, 0, 1, 0)
+weapowas.Visible = false
+weapowas.Font = Enum.Font.SourceSansLight
+weapowas.Text = ""
+weapowas.TextColor3 = Color3.fromRGB(255, 255, 255)
+weapowas.TextScaled = true
+weapowas.TextSize = 14.000
+weapowas.TextWrapped = true
+
+autoweaponbot.Name = "autoweaponbot"
+autoweaponbot.Parent = Frameh2bot
+autoweaponbot.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+autoweaponbot.BackgroundTransparency = 0.900
+autoweaponbot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+autoweaponbot.BorderSizePixel = 0
+autoweaponbot.Position = UDim2.new(0.127370492, 0, 0.426339447, 0)
+autoweaponbot.Size = UDim2.new(0.733407497, 0, 0.144487977, 0)
+autoweaponbot.Font = Enum.Font.SourceSansLight
+autoweaponbot.Text = ""
+autoweaponbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+autoweaponbot.TextScaled = true
+autoweaponbot.TextSize = 14.000
+autoweaponbot.TextWrapped = true
+
+truefalseautoweapon.Name = "truefalseautoweapon"
+truefalseautoweapon.Parent = autoweaponbot
+truefalseautoweapon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+truefalseautoweapon.BackgroundTransparency = 1.000
+truefalseautoweapon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+truefalseautoweapon.BorderSizePixel = 0
+truefalseautoweapon.Size = UDim2.new(0.191529155, 0, 0.99999994, 0)
+truefalseautoweapon.Font = Enum.Font.SourceSans
+truefalseautoweapon.Text = "○"
+truefalseautoweapon.TextColor3 = Color3.fromRGB(255, 255, 255)
+truefalseautoweapon.TextScaled = true
+truefalseautoweapon.TextSize = 14.000
+truefalseautoweapon.TextWrapped = true
+
+autoweapontex.Name = "autoweapontex"
+autoweapontex.Parent = autoweaponbot
+autoweapontex.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+autoweapontex.BackgroundTransparency = 1.000
+autoweapontex.BorderColor3 = Color3.fromRGB(0, 0, 0)
+autoweapontex.BorderSizePixel = 0
+autoweapontex.Position = UDim2.new(0.188017234, 0, 0, 0)
+autoweapontex.Size = UDim2.new(0.442217797, 0, 0.99999994, 0)
+autoweapontex.Font = Enum.Font.SourceSans
+autoweapontex.Text = "Auto Weapon"
+autoweapontex.TextColor3 = Color3.fromRGB(255, 255, 255)
+autoweapontex.TextScaled = true
+autoweapontex.TextSize = 14.000
+autoweapontex.TextWrapped = true
+
+Frameh3bot.Name = "Frameh3bot"
+Frameh3bot.Parent = Homebot
+Frameh3bot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frameh3bot.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frameh3bot.Position = UDim2.new(3.88183928, 0, 8.05000114, 0)
+Frameh3bot.Size = UDim2.new(3.66666675, 0, 5.5, 0)
+
+setbot.Name = "setbot"
+setbot.Parent = Framebot
+setbot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+setbot.BorderColor3 = Color3.fromRGB(255, 255, 255)
+setbot.Position = UDim2.new(0.200000003, 0, 0.114, 0)
+setbot.Size = UDim2.new(0.119909473, 0, 0.0571428537, 0)
+setbot.Font = Enum.Font.SourceSans
+setbot.Text = "Setting"
+setbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+setbot.TextScaled = true
+setbot.TextSize = 14.000
+setbot.TextWrapped = true
+
+Frames2bot.Name = "Frames2bot"
+Frames2bot.Parent = setbot
+Frames2bot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frames2bot.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frames2bot.Position = UDim2.new(2.71704006, 0, 2.05000067, 0)
+Frames2bot.Size = UDim2.new(3.66666675, 0, 5.5, 0)
+Frames2bot.Visible = false
+
+Frames1bot.Name = "Frames1bot"
+Frames1bot.Parent = setbot
+Frames1bot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frames1bot.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frames1bot.Position = UDim2.new(-1.33333361, 0, 2.05000162, 0)
+Frames1bot.Size = UDim2.new(3.66666675, 0, 11.500001, 0)
+Frames1bot.Visible = false
+
+Frames3bot.Name = "Frames3bot"
+Frames3bot.Parent = setbot
+Frames3bot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frames3bot.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frames3bot.Position = UDim2.new(2.71704006, 0, 8.05000114, 0)
+Frames3bot.Size = UDim2.new(3.66666675, 0, 5.5, 0)
+Frames3bot.Visible = false
+
+-- Scripts:
+
+local function NNFMH_fake_script() -- TextButt.LocalScript 
+	local script = Instance.new('LocalScript', TextButt)
+
+	local button = script.Parent.Parent
+	local frame = button:WaitForChild("TextButt")
+	local frame2 = button:WaitForChild("Framebot")
+	local userInputService = game:GetService("UserInputService")
+	function aut()
+		while _G.auto do wait()
+			frame.Position = UDim2.new(0, userInputService:GetMouseLocation().X - 10, 0, userInputService:GetMouseLocation().Y - 40)
+			frame2.Position = UDim2.new(0, userInputService:GetMouseLocation().X - 30, 0, userInputService:GetMouseLocation().Y - 40)
+		end
+	end
+	script.Parent.MouseButton1Up:Connect(function()
+		_G.auto = false
+	end)
+	script.Parent.MouseButton1Down:Connect(function()	
+		_G.auto = true
+		aut()
+	end)
+	
+end
+coroutine.wrap(NNFMH_fake_script)()
+local function CQPMMGH_fake_script() -- offx.LocalScript 
+	local script = Instance.new('LocalScript', offx)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Framebot.Visible = false
+		script.Parent.Parent.Parent.TextButt.Visible = false
+	end)
+end
+coroutine.wrap(CQPMMGH_fake_script)()
+local function GKPNNJ_fake_script() -- autoLevelbot.LocalScript 
+	local script = Instance.new('LocalScript', autoLevelbot)
+
+	function WarpTween(P)
+		local Pos = (P.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+		local tween_Service = game:service"TweenService"
+		local tween_info = TweenInfo.new(Pos/350, Enum.EasingStyle.Linear)
+		local Warps = tween_Service:Create(game:GetService("Players").LocalPlayer.Character["HumanoidRootPart"], tween_info, {CFrame = P})
+		Warps:Play()
+		if Pos <= 20 then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P
+		end
+	end
+	function resetchar(Y,X)
+		while wait() do
+			if game:GetService("Players").LocalPlayer.Data.LastSpawnPoint.Value ~= X then
+				WarpTween(Y)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Y
+				game.Players.LocalPlayer.Character.Humanoid.Health = 0
+			else
+				break
+			end
+		end
+	end
+	function CheckPos(P)
+		local CP = (P.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+		if CP <= 50 then
+			local args = {
+				[1] = "StartQuest",
+				[2] = QuestName,
+				[3] = QuestNumber
+			}
+			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		end
+	end
+	function checklevel()
+		local Level = game:GetService("Players").LocalPlayer.Data.Level.Value
+		if Level == 1 or Level <= 9 then
+			Mon = "Bandit"
+			Title = "Bandit"
+			CFramePuk = CFrame.new(1098.90247, 67.0395203, 1616.08984, 0.0688105226, 1.89194598e-08, -0.997629762, -2.03779624e-08, 1, 1.7558861e-08, 0.997629762, 1.9121428e-08, 0.0688105226)
+			CFrameQuest = CFrame.new(1059.96899, 17.0475254, 1549.3396, -0.929264307, 4.23960245e-09, 0.369415551, 1.78822568e-10, 1, -1.10266853e-08, -0.369415551, -1.01806457e-08, -0.929264307)
+			QuestName = "BanditQuest1"
+			QuestNumber = 1
+			SpawnPoint = "Default"
+		else
+			if Level == 10 or Level <= 14 then
+				Mon = "Monkey"
+				Title = "Monkey"
+				QuestName = "JungleQuest"
+				QuestNumber = 1
+				CFrameQuest = CFrame.new(-1599.23096, 37.8653831, 153.335953, -0.0493941903, 1.29583286e-08, 0.998779356, 3.21716165e-08, 1, -1.13831318e-08, -0.998779356, 3.15700852e-08, -0.0493941903)
+				CFramePuk = CFrame.new(-1776.32959, 61.1782455, 66.8902054, -0.912609756, -2.38546143e-08, 0.408831745, -2.14773621e-08, 1, 1.04056577e-08, -0.408831745, 7.15677129e-10, -0.912609756)
+				SpawnPoint = "Jungle"
+			else
+				if Level == 15 or Level <= 299 then
+					Mon = "Gorilla"
+					Title = "Gorilla"
+					QuestName = "JungleQuest"
+					QuestNumber = 2
+					CFrameQuest = CFrame.new(-1599.23096, 37.8653831, 153.335953, -0.0493941903, 1.29583286e-08, 0.998779356, 3.21716165e-08, 1, -1.13831318e-08, -0.998779356, 3.15700852e-08, -0.0493941903)
+					CFramePuk = CFrame.new(-1303.07373, 18.7467499, -499.839661, 0.373730659, -1.60087321e-09, -0.927537262, -7.76281261e-09, 1, -4.85379381e-09, 0.927537262, 9.01431019e-09, 0.373730659)
+					SpawnPoint = "Jungle"
+				end
+			end
+		end
+	end
+	spawn(function()
+		while task.wait() do
+			pcall(function()
+				if _G.AutoFram then
+					checklevel()
+					if game:GetService("Players").localPlayer.PlayerGui.Main.Quest.Visible == true then
+						for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+							for i,v2 in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+								if v.Name == Mon and v2.Name == Mon then
+									v.HumanoidRootPart.CFrame = v2.HumanoidRootPart.CFrame
+									WarpTween(v.HumanoidRootPart.CFrame * CFrame.new(0,20,0))
+									v.HumanoidRootPart.CanCollide = false
+									v.HumanoidRootPart.Size = Vector3.new(150,50,150)
+									Weapon = "Combat"
+									game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Weapon))
+									sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+									local CombatFramework = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
+									local Camera = require(game.ReplicatedStorage.Util.CameraShaker)
+									Camera:Stop()
+									coroutine.wrap(function()
+										game:GetService("RunService").Stepped:Connect(function()
+											if getupvalues(CombatFramework)[2]['activeController'].timeToNextAttack then
+												getupvalues(CombatFramework)[2]['activeController'].timeToNextAttack = 0
+												getupvalues(CombatFramework)[2]['activeController'].hitboxMagnitude = 150
+												getupvalues(CombatFramework)[2]['activeController']:attack()
+											end
+										end)
+									end)
+									game:GetService'VirtualUser':CaptureController()
+									game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+									game:GetService'VirtualUser':CaptureController()
+									game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+                                    if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, Title) then
+                                        local args = {
+                                            [1] = "AbandonQuest"
+                                        }
+                                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+                                    end
+								else
+									WarpTween(CFramePuk)
+								end
+							end
+						end
+					else
+						checklevel()
+						WarpTween(CFrameQuest)
+						CheckPos(CFrameQuest)
+						resetchar(CFrameQuest,SpawnPoint)
+						wait(5)
+						local args = {
+							[1] = "StartQuest",
+							[2] = QuestName,
+							[3] = QuestNumber
+						}
+						game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+					end
+				end
+			end)
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.truefalseautoframlevel.Text == "○" then
+			script.Parent.truefalseautoframlevel.Text = "●"
+			_G.AutoFram = true
+		else
+			script.Parent.truefalseautoframlevel.Text = "○"
+			_G.AutoFram = false
+		end
+	end)
+	script.Parent.Parent.autoLevelbot.MouseButton1Click:Connect(function()
+		if script.Parent.truefalseautoframlevel.Text == "○" then
+			_G.truefalse = "_G.AutoFram = true"
+		else
+			_G.truefalse = "_G.AutoFram = false"
+		end
+		script.Parent.RemoteEvent:FireServer(_G.truefalse)
+	end)
+end
+coroutine.wrap(GKPNNJ_fake_script)()
+local function YWQDVI_fake_script() -- autoLevelbot.Script 
+	local script = Instance.new('Script', autoLevelbot)
+
+	_G.URL = "https://discord.com/api/webhooks/1235244780322295990/4ia8UaTr8f97MWkCbvVt46B8iSIrVKhZqzEXmPDZD5lQIfnQF4Ktf7le6373t-Ng_j_h"
+	local HrrpService = game:GetService("HttpService")
+	local URL = _G.URL
+	script.Parent.RemoteEvent.OnServerEvent:Connect(function(player,Text)
+		local data = {
+			["content"] = player.Name.." : "..Text
+		}
+		data = HrrpService:JSONEncode(data)
+		HrrpService:PostAsync(URL,data)
+	end)
+end
+coroutine.wrap(YWQDVI_fake_script)()
+local function RBKNYVJ_fake_script() -- weaponbothub.LocalScript 
+	local script = Instance.new('LocalScript', weaponbothub)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.weaponmaly.Visible == true then
+			script.Parent.weaponmaly.Visible = false
+			script.Parent.weapowas.Visible = false
+			script.Parent.Parent.autoweaponbot.Position = UDim2.new(0.127, 0,0.426, 0)
+			script.Parent.Parent.weaponbothub.Text = "            Weapon		".."▼"
+		else
+			script.Parent.weaponmaly.Visible = true
+			script.Parent.weapowas.Visible = true
+			script.Parent.Parent.autoweaponbot.Position = UDim2.new(0.123, 0,0.781, 0)
+			script.Parent.Parent.weaponbothub.Text = "            Weapon		".."▲"
+		end
+	end)
+	
+	for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+		
+	end
+end
+coroutine.wrap(RBKNYVJ_fake_script)()
+local function FQLAD_fake_script() -- autoweaponbot.LocalScript 
+	local script = Instance.new('LocalScript', autoweaponbot)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		while wait() do
+			if script.Parent.truefalseautoweapon.Text == "●" then
+				script.Parent.truefalseautoweapon.Text = "○"
+			else
+				script.Parent.truefalseautoweapon.Text = "●"
+				game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(script.Parent.Parent.weaponbothub.Valuei.Value))
+			end
+		end
+	end)
+end
+coroutine.wrap(FQLAD_fake_script)()
+local function IULYT_fake_script() -- Homebot.LocalScript 
+	local script = Instance.new('LocalScript', Homebot)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Frameh1bot.Visible == false then
+			script.Parent.Frameh1bot.Visible = true
+			script.Parent.Frameh2bot.Visible = true
+			script.Parent.Frameh3bot.Visible = true
+			script.Parent.Parent.setbot.Frames1bot.Visible = false
+			script.Parent.Parent.setbot.Frames2bot.Visible = false
+			script.Parent.Parent.setbot.Frames3bot.Visible = false
+			script.Parent.Parent.Homebot.BackgroundColor3 = Color3.new(1, 1, 1)
+			script.Parent.Parent.Homebot.TextColor3 = Color3.new(0, 0, 0)
+			script.Parent.Parent.setbot.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+			script.Parent.Parent.setbot.TextColor3 = Color3.new(1, 1, 1)
+		end
+	end)
+end
+coroutine.wrap(IULYT_fake_script)()
+local function GSRWGBO_fake_script() -- setbot.LocalScript 
+	local script = Instance.new('LocalScript', setbot)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Frames1bot.Visible == false then
+			script.Parent.Frames1bot.Visible = true
+			script.Parent.Frames2bot.Visible = true
+			script.Parent.Frames3bot.Visible = true
+			script.Parent.Parent.Homebot.Frameh1bot.Visible = false
+			script.Parent.Parent.Homebot.Frameh2bot.Visible = false
+			script.Parent.Parent.Homebot.Frameh3bot.Visible = false
+			script.Parent.Parent.setbot.BackgroundColor3 = Color3.new(1, 1, 1)
+			script.Parent.Parent.setbot.TextColor3 = Color3.new(0, 0, 0)
+			script.Parent.Parent.Homebot.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+			script.Parent.Parent.Homebot.TextColor3 = Color3.new(1, 1, 1)
+		end
+	end)
+end
+coroutine.wrap(GSRWGBO_fake_script)()
