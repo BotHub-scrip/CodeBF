@@ -1,308 +1,695 @@
-_G.AutoFram = true
-function totarget(p)
-		if _G.AutoFram then
-			local Distance2 = (p.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-			local tween_s = game:service"TweenService"
-			local info = TweenInfo.new(Distance2/350, Enum.EasingStyle.Linear)
-			local tween = tween_s:Create(game:GetService("Players").LocalPlayer.Character["HumanoidRootPart"], info, {CFrame = p})
-			tween:Play()
-			if Distance2 <= 75 then
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = p
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local TextButt = Instance.new("TextButton")
+local Framebot = Instance.new("ImageLabel")
+local uf = Instance.new("TextLabel")
+local nanescripbot = Instance.new("TextLabel")
+local offx = Instance.new("TextButton")
+local soombot = Instance.new("TextButton")
+local oubot = Instance.new("TextButton")
+local Homebot = Instance.new("TextButton")
+local Frameh2bot = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local weaponbothub = Instance.new("TextButton")
+local weaponmaly = Instance.new("TextButton")
+local weapowas = Instance.new("TextButton")
+local nameerap = Instance.new("TextLabel")
+local autoweaponbot = Instance.new("TextButton")
+local truefalseautoweapon = Instance.new("TextLabel")
+local autoweapontex = Instance.new("TextLabel")
+local Frameh3bot = Instance.new("Frame")
+local Frameh1bot = Instance.new("Frame")
+local frambot = Instance.new("TextLabel")
+local autoLevelbot = Instance.new("TextButton")
+local truefalseautoframlevel = Instance.new("TextLabel")
+local autoframlevelbottex = Instance.new("TextLabel")
+local setbot = Instance.new("TextButton")
+local Frames2bot = Instance.new("Frame")
+local Frames1bot = Instance.new("Frame")
+local Frames3bot = Instance.new("Frame")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+TextButt.Name = "TextButt"
+TextButt.Parent = ScreenGui
+TextButt.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextButt.BackgroundTransparency = 1.000
+TextButt.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButt.BorderSizePixel = 0
+TextButt.Position = UDim2.new(0.259075046, 0, 0.152083308, 0)
+TextButt.Size = UDim2.new(0.400201648, 0, 0.0416666679, 0)
+TextButt.Font = Enum.Font.SourceSans
+TextButt.Text = ""
+TextButt.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButt.TextSize = 14.000
+
+Framebot.Name = "Framebot"
+Framebot.Parent = ScreenGui
+Framebot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Framebot.BackgroundTransparency = 1.000
+Framebot.Position = UDim2.new(0.246978313, 0, 0.152083308, 0)
+Framebot.Size = UDim2.new(0.50441277, 0, 0.729166746, 0)
+Framebot.ZIndex = 0
+Framebot.Image = "rbxassetid://3570695787"
+Framebot.ImageColor3 = Color3.fromRGB(50, 50, 50)
+Framebot.ScaleType = Enum.ScaleType.Slice
+Framebot.SliceCenter = Rect.new(100, 100, 100, 100)
+Framebot.SliceScale = 0.120
+
+uf.Name = "uf"
+uf.Parent = Framebot
+uf.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uf.BorderColor3 = Color3.fromRGB(0, 0, 0)
+uf.BorderSizePixel = 0
+uf.Position = UDim2.new(0, 0, 0.0799999982, 0)
+uf.Size = UDim2.new(0.99999994, 0, 0.00428571412, 0)
+uf.Font = Enum.Font.SourceSans
+uf.Text = ""
+uf.TextColor3 = Color3.fromRGB(0, 0, 0)
+uf.TextSize = 14.000
+
+nanescripbot.Name = "nanescripbot"
+nanescripbot.Parent = Framebot
+nanescripbot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nanescripbot.BackgroundTransparency = 1.000
+nanescripbot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nanescripbot.BorderSizePixel = 0
+nanescripbot.Position = UDim2.new(-0.00199846085, 0, 0.0614286102, 0)
+nanescripbot.Size = UDim2.new(0.250694036, 0, -0.0585714653, 0)
+nanescripbot.Font = Enum.Font.SourceSans
+nanescripbot.Text = "Bot Hub"
+nanescripbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+nanescripbot.TextScaled = true
+nanescripbot.TextSize = 14.000
+nanescripbot.TextWrapped = true
+
+offx.Name = "offx"
+offx.Parent = Framebot
+offx.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+offx.BackgroundTransparency = 1.000
+offx.BorderColor3 = Color3.fromRGB(0, 0, 0)
+offx.BorderSizePixel = 0
+offx.Position = UDim2.new(0.937292397, 0, 0.00285714259, 0)
+offx.Size = UDim2.new(0.0599547364, 0, 0.0571428537, 0)
+offx.Font = Enum.Font.SourceSans
+offx.Text = "X"
+offx.TextColor3 = Color3.fromRGB(255, 255, 255)
+offx.TextScaled = true
+offx.TextSize = 14.000
+offx.TextWrapped = true
+
+soombot.Name = "soombot"
+soombot.Parent = Framebot
+soombot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+soombot.BackgroundTransparency = 1.000
+soombot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+soombot.BorderSizePixel = 0
+soombot.Position = UDim2.new(0.877337635, 0, 0.00285714259, 0)
+soombot.Size = UDim2.new(0.0599547364, 0, 0.0571428537, 0)
+soombot.Font = Enum.Font.SourceSans
+soombot.Text = "☐"
+soombot.TextColor3 = Color3.fromRGB(255, 255, 255)
+soombot.TextScaled = true
+soombot.TextSize = 14.000
+soombot.TextWrapped = true
+
+oubot.Name = "oubot"
+oubot.Parent = Framebot
+oubot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+oubot.BackgroundTransparency = 1.000
+oubot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+oubot.BorderSizePixel = 0
+oubot.Position = UDim2.new(0.817382932, 0, 0.00285714259, 0)
+oubot.Size = UDim2.new(0.0599547364, 0, 0.0571428537, 0)
+oubot.Font = Enum.Font.SourceSans
+oubot.Text = "-"
+oubot.TextColor3 = Color3.fromRGB(255, 255, 255)
+oubot.TextScaled = true
+oubot.TextSize = 14.000
+oubot.TextWrapped = true
+
+Homebot.Name = "Homebot"
+Homebot.Parent = Framebot
+Homebot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Homebot.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Homebot.Position = UDim2.new(0.0621997379, 0, 0.114285707, 0)
+Homebot.Size = UDim2.new(0.119909473, 0, 0.0571428537, 0)
+Homebot.Font = Enum.Font.SourceSans
+Homebot.Text = "Home"
+Homebot.TextColor3 = Color3.fromRGB(0, 0, 0)
+Homebot.TextScaled = true
+Homebot.TextSize = 14.000
+Homebot.TextWrapped = true
+
+Frameh2bot.Name = "Frameh2bot"
+Frameh2bot.Parent = Homebot
+Frameh2bot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frameh2bot.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frameh2bot.Position = UDim2.new(3.88183928, 0, 2.05000067, 0)
+Frameh2bot.Size = UDim2.new(3.66666675, 0, 5.5, 0)
+
+TextLabel.Parent = Frameh2bot
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(1, 0, 0.13636364, 0)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "\\\\  Weapon  //"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+weaponbothub.Name = "weaponbothub"
+weaponbothub.Parent = Frameh2bot
+weaponbothub.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+weaponbothub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+weaponbothub.BorderSizePixel = 0
+weaponbothub.Position = UDim2.new(0.174663931, 0, 0.227272734, 0)
+weaponbothub.Size = UDim2.new(0.643999994, 0, 0.129999995, 0)
+weaponbothub.Font = Enum.Font.SourceSansLight
+weaponbothub.Text = "                                      ▼"
+weaponbothub.TextColor3 = Color3.fromRGB(255, 255, 255)
+weaponbothub.TextScaled = true
+weaponbothub.TextSize = 14.000
+weaponbothub.TextWrapped = true
+
+weaponmaly.Name = "weaponmaly"
+weaponmaly.Parent = weaponbothub
+weaponmaly.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+weaponmaly.BorderColor3 = Color3.fromRGB(0, 0, 0)
+weaponmaly.BorderSizePixel = 0
+weaponmaly.Position = UDim2.new(0.00326738413, 0, 1.53446376, 0)
+weaponmaly.Size = UDim2.new(1, 0, 1, 0)
+weaponmaly.Visible = false
+weaponmaly.Font = Enum.Font.SourceSansLight
+weaponmaly.Text = ""
+weaponmaly.TextColor3 = Color3.fromRGB(255, 255, 255)
+weaponmaly.TextScaled = true
+weaponmaly.TextSize = 14.000
+weaponmaly.TextWrapped = true
+
+weapowas.Name = "weapowas"
+weapowas.Parent = weaponbothub
+weapowas.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+weapowas.BorderColor3 = Color3.fromRGB(0, 0, 0)
+weapowas.BorderSizePixel = 0
+weapowas.Position = UDim2.new(0.00337261963, 0, 2.99981403, 0)
+weapowas.Size = UDim2.new(1, 0, 1, 0)
+weapowas.Visible = false
+weapowas.Font = Enum.Font.SourceSansLight
+weapowas.Text = ""
+weapowas.TextColor3 = Color3.fromRGB(255, 255, 255)
+weapowas.TextScaled = true
+weapowas.TextSize = 14.000
+weapowas.TextWrapped = true
+
+nameerap.Name = "nameerap"
+nameerap.Parent = weaponbothub
+nameerap.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+nameerap.BackgroundTransparency = 1.000
+nameerap.BorderColor3 = Color3.fromRGB(0, 0, 0)
+nameerap.BorderSizePixel = 0
+nameerap.Size = UDim2.new(1, 0, 1, 0)
+nameerap.Font = Enum.Font.SourceSans
+nameerap.Text = "Weapon"
+nameerap.TextColor3 = Color3.fromRGB(255, 255, 255)
+nameerap.TextScaled = true
+nameerap.TextSize = 14.000
+nameerap.TextWrapped = true
+
+autoweaponbot.Name = "autoweaponbot"
+autoweaponbot.Parent = Frameh2bot
+autoweaponbot.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+autoweaponbot.BackgroundTransparency = 0.900
+autoweaponbot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+autoweaponbot.BorderSizePixel = 0
+autoweaponbot.Position = UDim2.new(0.127370492, 0, 0.426339447, 0)
+autoweaponbot.Size = UDim2.new(0.733407497, 0, 0.144487977, 0)
+autoweaponbot.Font = Enum.Font.SourceSansLight
+autoweaponbot.Text = ""
+autoweaponbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+autoweaponbot.TextScaled = true
+autoweaponbot.TextSize = 14.000
+autoweaponbot.TextWrapped = true
+
+truefalseautoweapon.Name = "truefalseautoweapon"
+truefalseautoweapon.Parent = autoweaponbot
+truefalseautoweapon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+truefalseautoweapon.BackgroundTransparency = 1.000
+truefalseautoweapon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+truefalseautoweapon.BorderSizePixel = 0
+truefalseautoweapon.Size = UDim2.new(0.191529155, 0, 0.99999994, 0)
+truefalseautoweapon.Font = Enum.Font.SourceSans
+truefalseautoweapon.Text = "○"
+truefalseautoweapon.TextColor3 = Color3.fromRGB(255, 255, 255)
+truefalseautoweapon.TextScaled = true
+truefalseautoweapon.TextSize = 14.000
+truefalseautoweapon.TextWrapped = true
+
+autoweapontex.Name = "autoweapontex"
+autoweapontex.Parent = autoweaponbot
+autoweapontex.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+autoweapontex.BackgroundTransparency = 1.000
+autoweapontex.BorderColor3 = Color3.fromRGB(0, 0, 0)
+autoweapontex.BorderSizePixel = 0
+autoweapontex.Position = UDim2.new(0.188017234, 0, 0, 0)
+autoweapontex.Size = UDim2.new(0.442217797, 0, 0.99999994, 0)
+autoweapontex.Font = Enum.Font.SourceSans
+autoweapontex.Text = "Auto Weapon"
+autoweapontex.TextColor3 = Color3.fromRGB(255, 255, 255)
+autoweapontex.TextScaled = true
+autoweapontex.TextSize = 14.000
+autoweapontex.TextWrapped = true
+
+Frameh3bot.Name = "Frameh3bot"
+Frameh3bot.Parent = Homebot
+Frameh3bot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frameh3bot.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frameh3bot.Position = UDim2.new(3.88183928, 0, 8.05000114, 0)
+Frameh3bot.Size = UDim2.new(3.66666675, 0, 5.5, 0)
+
+Frameh1bot.Name = "Frameh1bot"
+Frameh1bot.Parent = Homebot
+Frameh1bot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frameh1bot.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frameh1bot.Position = UDim2.new(-0.185389072, 0, 2.05000067, 0)
+Frameh1bot.Size = UDim2.new(3.66666675, 0, 11.500001, 0)
+
+frambot.Name = "frambot"
+frambot.Parent = Frameh1bot
+frambot.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+frambot.BackgroundTransparency = 1.000
+frambot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+frambot.BorderSizePixel = 0
+frambot.Size = UDim2.new(1, 0, 0.0652173907, 0)
+frambot.Font = Enum.Font.SourceSans
+frambot.Text = "\\\\  Fram //"
+frambot.TextColor3 = Color3.fromRGB(255, 255, 255)
+frambot.TextScaled = true
+frambot.TextSize = 14.000
+frambot.TextWrapped = true
+
+autoLevelbot.Name = "autoLevelbot"
+autoLevelbot.Parent = Frameh1bot
+autoLevelbot.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+autoLevelbot.BackgroundTransparency = 0.900
+autoLevelbot.BorderColor3 = Color3.fromRGB(0, 0, 0)
+autoLevelbot.BorderSizePixel = 0
+autoLevelbot.Position = UDim2.new(0.131966904, 0, 0.102624103, 0)
+autoLevelbot.Size = UDim2.new(0.733407497, 0, 0.0662271231, 0)
+autoLevelbot.Font = Enum.Font.SourceSansLight
+autoLevelbot.Text = ""
+autoLevelbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+autoLevelbot.TextScaled = true
+autoLevelbot.TextSize = 14.000
+autoLevelbot.TextWrapped = true
+
+truefalseautoframlevel.Name = "truefalseautoframlevel"
+truefalseautoframlevel.Parent = autoLevelbot
+truefalseautoframlevel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+truefalseautoframlevel.BackgroundTransparency = 1.000
+truefalseautoframlevel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+truefalseautoframlevel.BorderSizePixel = 0
+truefalseautoframlevel.Size = UDim2.new(0.191529155, 0, 0.99999994, 0)
+truefalseautoframlevel.Font = Enum.Font.SourceSans
+truefalseautoframlevel.Text = "○"
+truefalseautoframlevel.TextColor3 = Color3.fromRGB(255, 255, 255)
+truefalseautoframlevel.TextScaled = true
+truefalseautoframlevel.TextSize = 14.000
+truefalseautoframlevel.TextWrapped = true
+
+autoframlevelbottex.Name = "autoframlevelbottex"
+autoframlevelbottex.Parent = autoLevelbot
+autoframlevelbottex.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+autoframlevelbottex.BackgroundTransparency = 1.000
+autoframlevelbottex.BorderColor3 = Color3.fromRGB(0, 0, 0)
+autoframlevelbottex.BorderSizePixel = 0
+autoframlevelbottex.Position = UDim2.new(0.188017234, 0, 0, 0)
+autoframlevelbottex.Size = UDim2.new(0.500194907, 0, 0.99999994, 0)
+autoframlevelbottex.Font = Enum.Font.SourceSans
+autoframlevelbottex.Text = "Auto Fram Level"
+autoframlevelbottex.TextColor3 = Color3.fromRGB(255, 255, 255)
+autoframlevelbottex.TextScaled = true
+autoframlevelbottex.TextSize = 14.000
+autoframlevelbottex.TextWrapped = true
+
+setbot.Name = "setbot"
+setbot.Parent = Framebot
+setbot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+setbot.BorderColor3 = Color3.fromRGB(255, 255, 255)
+setbot.Position = UDim2.new(0.200000003, 0, 0.114, 0)
+setbot.Size = UDim2.new(0.119909473, 0, 0.0571428537, 0)
+setbot.Font = Enum.Font.SourceSans
+setbot.Text = "Setting"
+setbot.TextColor3 = Color3.fromRGB(255, 255, 255)
+setbot.TextScaled = true
+setbot.TextSize = 14.000
+setbot.TextWrapped = true
+
+Frames2bot.Name = "Frames2bot"
+Frames2bot.Parent = setbot
+Frames2bot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frames2bot.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frames2bot.Position = UDim2.new(2.71704006, 0, 2.05000067, 0)
+Frames2bot.Size = UDim2.new(3.66666675, 0, 5.5, 0)
+Frames2bot.Visible = false
+
+Frames1bot.Name = "Frames1bot"
+Frames1bot.Parent = setbot
+Frames1bot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frames1bot.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frames1bot.Position = UDim2.new(-1.33333361, 0, 2.05000162, 0)
+Frames1bot.Size = UDim2.new(3.66666675, 0, 11.500001, 0)
+Frames1bot.Visible = false
+
+Frames3bot.Name = "Frames3bot"
+Frames3bot.Parent = setbot
+Frames3bot.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frames3bot.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Frames3bot.Position = UDim2.new(2.71704006, 0, 8.05000114, 0)
+Frames3bot.Size = UDim2.new(3.66666675, 0, 5.5, 0)
+Frames3bot.Visible = false
+
+-- Scripts:
+
+local function FSOZ_fake_script() -- TextButt.LocalScript 
+	local script = Instance.new('LocalScript', TextButt)
+
+	local button = script.Parent.Parent
+	local frame = button:WaitForChild("TextButt")
+	local frame2 = button:WaitForChild("Framebot")
+	local userInputService = game:GetService("UserInputService")
+	function aut()
+		while _G.auto do wait()
+			frame.Position = UDim2.new(0, userInputService:GetMouseLocation().X - 10, 0, userInputService:GetMouseLocation().Y - 40)
+			frame2.Position = UDim2.new(0, userInputService:GetMouseLocation().X - 30, 0, userInputService:GetMouseLocation().Y - 40)
 		end
 	end
+	script.Parent.MouseButton1Up:Connect(function()
+		_G.auto = false
+	end)
+	script.Parent.MouseButton1Down:Connect(function()	
+		_G.auto = true
+		aut()
+	end)
+	
 end
-function checklevel()
-	local Level = game:GetService("Players").LocalPlayer.Data.Level.Value
-	if Level == 1 or Level <= 9 then
-        Mon = "Bandit"
-        Title = "Bandit"
-        CFramePuk = CFrame.new(1098.90247, 67.0395203, 1616.08984, 0.0688105226, 1.89194598e-08, -0.997629762, -2.03779624e-08, 1, 1.7558861e-08, 0.997629762, 1.9121428e-08, 0.0688105226)
-        CFrameQuest = CFrame.new(1059.96899, 17.0475254, 1549.3396, -0.929264307, 4.23960245e-09, 0.369415551, 1.78822568e-10, 1, -1.10266853e-08, -0.369415551, -1.01806457e-08, -0.929264307)
-        QuestName = "BanditQuest1"
-        QuestNumber = 1
-    else
-    if Level == 10 or Level <= 14 then
-        Mon = "Monkey"
-		Title = "Monkey"
-		QuestName = "JungleQuest"
-		QuestNumber = 1
-		CFrameQuest = CFrame.new(-1599.23096, 37.8653831, 153.335953, -0.0493941903, 1.29583286e-08, 0.998779356, 3.21716165e-08, 1, -1.13831318e-08, -0.998779356, 3.15700852e-08, -0.0493941903)
-		CFramePuk = CFrame.new(-1776.32959, 61.1782455, 66.8902054, -0.912609756, -2.38546143e-08, 0.408831745, -2.14773621e-08, 1, 1.04056577e-08, -0.408831745, 7.15677129e-10, -0.912609756)
-    else 
-    if Level == 15 or Level <= 29 then
-        Mon = "Gorilla"
-        Title = "Gorilla"
-        QuestName = "JungleQuest"
-        QuestNumber = 2
-        CFrameQuest = CFrame.new(-1599.23096, 37.8653831, 153.335953, -0.0493941903, 1.29583286e-08, 0.998779356, 3.21716165e-08, 1, -1.13831318e-08, -0.998779356, 3.15700852e-08, -0.0493941903)
-        CFramePuk = CFrame.new(-1133.4574, 40.8067436, -526.086792, 0.647179008, -2.76535794e-10, 0.762338042, 3.26674865e-08, 1, -2.73699801e-08, -0.762338042, 4.26169464e-08, 0.647179008)
-    else
-    if Level == 30 or Level <= 39 then
-        Mon = "Pirate"
-        Title = "Pirate"
-        QuestName = "BuggyQuest1"
-        QuestNumber = 1
-        CFrameQuest = CFrame.new(-1140.75, 5.27738094, 3830.41626, -0.971490741, 7.58226264e-08, 0.237077385, 6.98668288e-08, 1, -3.3523424e-08, -0.237077385, -1.60038507e-08, -0.971490741)
-        CFramePuk = CFrame.new(-1251.65491, 44.8773575, 3817.86255, -0.973911822, -7.29827363e-08, 0.226926699, -5.31656923e-08, 1, 9.34400362e-08, -0.226926699, 7.89376458e-08, -0.973911822)
-    else
-    if Level == 40 or Level <= 59 then
-        Mon = "Brute"
-        Title = "Brute"
-        QuestName = "BuggyQuest1"
-        QuestNumber = 2
-        CFrameQuest = CFrame.new(-1140.75, 5.27738094, 3830.41626, -0.971490741, 7.58226264e-08, 0.237077385, 6.98668288e-08, 1, -3.3523424e-08, -0.237077385, -1.60038507e-08, -0.971490741)
-        CFramePuk = CFrame.new(-1150.32996, 14.9352036, 4297.00439, 0.987384498, 1.01365842e-07, -0.158340812, -9.35679765e-08, 1, 5.67021949e-08, 0.158340812, -4.11712406e-08, 0.987384498)
-    else
-    if Level == 60 or Level <= 74 then
-        Mon = "Desert Bandit"
-        Title = "Desert Bandit"
-        QuestName = "DesertQuest"
-        QuestNumber = 1
-        CFrameQuest = CFrame.new(895.403687, 7.23450899, 4391.77539, -0.799823821, 1.00060483e-07, 0.600234807, 6.70158045e-08, 1, -7.74024542e-08, -0.600234807, -2.16831086e-08, -0.799823821)
-        CFramePuk = CFrame.new(916.636719, 6.57437086, 4487.20459, -0.99167639, 3.41378552e-08, -0.128755197, 4.00251139e-08, 1, -4.31369394e-08, 0.128755197, -4.79313265e-08, -0.99167639)
-    else
-    if Level == 75 or Level <= 89 then
-        Mon = "Desert Officer"
-        Title = "Desert Officer"
-        QuestName = "DesertQuest"
-        QuestNumber = 2
-        CFrameQuest = CFrame.new(895.403687, 7.23450899, 4391.77539, -0.799823821, 1.00060483e-07, 0.600234807, 6.70158045e-08, 1, -7.74024542e-08, -0.600234807, -2.16831086e-08, -0.799823821)
-        CFramePuk = CFrame.new(1569.03528, 10.738265, 4383.6958, 0.0669981688, -1.48621693e-08, -0.997753084, -7.62906396e-08, 1, -2.00184811e-08, 0.997753084, 7.74604203e-08, 0.0669981688)
-    else
-    if Level == 90 or Level <= 104 then
-        Mon = "Snow Bandit"
-        Title = "Snow Bandit"
-        QuestName = "SnowQuest"
-        QuestNumber = 1
-        CFrameQuest = CFrame.new(1388.32532, 87.6832581, -1298.98853, 0.257160485, -2.74615477e-08, -0.966368735, -5.96436962e-08, 1, -4.42890453e-08, 0.966368735, 6.90271946e-08, 0.257160485)
-        CFramePuk = CFrame.new(1380.35999, 99.3419647, -1423.54041, 0.917633533, -4.69509835e-08, 0.397427559, 7.785661e-09, 1, 1.00160641e-07, -0.397427559, -8.88165275e-08, 0.917633533)
-    else
-    if Level == 105 or Level <= 119 then
-        Mon = "Snowman"
-        Title = "Snowman"
-        QuestName = "SnowQuest"
-        QuestNumber = 2
-        CFrameQuest = CFrame.new(1388.32532, 87.6832581, -1298.98853, 0.257160485, -2.74615477e-08, -0.966368735, -5.96436962e-08, 1, -4.42890453e-08, 0.966368735, 6.90271946e-08, 0.257160485)
-        CFramePuk = CFrame.new(1069.38684, 133.932724, -1418.21716, 0.841472507, 6.84720902e-09, -0.540299892, -3.10686019e-08, 1, -3.5713807e-08, 0.540299892, 4.68385508e-08, 0.841472507)
-    else
-    if Level == 120 or Level <= 149 then
-        Mon = "Chief Petty Officer"
-        Title = "Chief Petty Officer"
-        QuestName = "nil"
-        QuestNumber = 1
-        CFrameQuest = CFrame.new(-5038.46484, 29.1578293, 4324.80713, 0.00912523735, 5.73297276e-09, 0.999958336, -3.70268238e-09, 1, -5.69942227e-09, -0.999958336, -3.65051966e-09, 0.00912523735)
-        CFramePuk = CFrame.new(-4944.73486, 20.6778202, 4035.72363, -0.286084443, -5.00526198e-08, 0.958204389, 3.86888672e-08, 1, 6.37869135e-08, -0.958204389, 5.53202888e-08, -0.286084443)
-        CFramePuk2 = CFrame.new(-4757.90479, 20.6778202, 4571.61572, -0.553644061, 5.52476287e-08, 0.83275342, 6.71170497e-08, 1, -2.17215224e-08, -0.83275342, 4.38659598e-08, -0.553644061)
-    else
-    if Level == 150 or Level <= 174 then
-        Mon = "Sky Bandit"
-        Title = "Sky Bandit"
-        QuestName = "SkyQuest"
-        QuestNumber = 1
-        CFrameQuest = CFrame.new(-4840.31299, 717.695129, -2620.99561, -0.872646511, 3.50654688e-08, -0.488352358, 4.38827996e-08, 1, -6.61141897e-09, 0.488352358, -2.71997003e-08, -0.872646511)
-        CFramePuk = CFrame.new(-4954.60107, 295.769989, -2901.80957, -0.99389571, 3.12787805e-08, -0.110323451, 3.31190577e-08, 1, -1.48482462e-08, 0.110323451, -1.84114182e-08, -0.99389571)
-    else
-    if Level == 175 or Level <= 189 then
-        Mon = "Dark Master"
-        Title = "Dark Master"
-        QuestName = "SkyQuest"
-        QuestNumber = 2
-        CFrameQuest = CFrame.new(-4840.31299, 717.695129, -2620.99561, -0.872646511, 3.50654688e-08, -0.488352358, 4.38827996e-08, 1, -6.61141897e-09, 0.488352358, -2.71997003e-08, -0.872646511)
-        CFramePuk = CFrame.new(-5275.05762, 388.677734, -2182.99194, 0.488915712, -1.5530194e-08, -0.872331023, 1.16674235e-08, 1, -1.12638521e-08, 0.872331023, -4.6707811e-09, 0.488915712)
-    else
-    if level == 190 or Level <= 209 then--คุก
-        Mon = "Prisoner"
-        Title = "Prisoner"
-        QuestName = "PrisonerQuest"
-        QuestNumber = 1
-        CFrameQuest = CFrame.new(5309.55225, 2.75195122, 474.679321, -0.0972714424, 1.170243e-07, -0.995257914, -2.67411835e-08, 1, 1.20195438e-07, 0.995257914, 3.83059557e-08, -0.0972714424)
-        CFramePuk = CFrame.new(5209.72754, 2.05960464, 404.438477, -0.867200434, -5.43310144e-08, 0.497959256, -5.61373241e-08, 1, 1.13437011e-08, -0.497959256, -1.81168378e-08, -0.867200434)
-    else
-    if Level == 210 or Level <= 249 then
-        Mon = "Dangerous Prisoner"
-        Title = "Dangerous Prisoner"
-        QuestName = "PrisonerQuest"
-        QuestNumber = 2
-        CFrameQuest = CFrame.new(5309.55225, 2.75195122, 474.679321, -0.0972714424, 1.170243e-07, -0.995257914, -2.67411835e-08, 1, 1.20195438e-07, 0.995257914, 3.83059557e-08, -0.0972714424)
-        CFramePuk = CFrame.new(5582.32861, 2.07905722, 642.074463, 0.460716367, 2.41286724e-08, -0.887547433, 5.63713964e-09, 1, 3.01119627e-08, 0.887547433, -1.88763032e-08, 0.460716367)
-    else
-    if Level == 250 or Level <= 274 then--ปลอง
-        Mon = "Toga Warriosrs"
-        Title = "Toga Warriosrs"
-        QuestName = "ColosseumQuest"
-        QuestNumber = 1
-        CFrameQuest = CFrame.new(-1580.97534, 8.5393095, -2987.01904, -0.500865996, 5.42050671e-09, -0.865524828, 2.36723388e-08, 1, -7.43613926e-09, 0.865524828, -2.42135076e-08, -0.500865996)
-        CFramePuk = CFrame.new(-1907.41516, 7.71650505, -2744.26758, 0.985260189, 0, -0.17106232, 0, 1, 0, 0.17106232, 0, 0.985260189)
-    else
-    if Level == 275 or Level <= 299 then
-        Mon = "Gladiator"
-        Title = "Gladiator"
-        QuestName = "ColosseumQuest"
-        QuestNumber = 2
-        CFrameQuest = CFrame.new(-1580.97534, 8.5393095, -2987.01904, -0.500865996, 5.42050671e-09, -0.865524828, 2.36723388e-08, 1, -7.43613926e-09, 0.865524828, -2.42135076e-08, -0.500865996)
-        CFramePuk = CFrame.new(-1455.57581, 7.86997795, -3246.27979, -0.484400183, -3.55323131e-08, 0.874846518, -6.56972503e-08, 1, 4.23908819e-09, -0.874846518, -5.5421598e-08, -0.484400183)
-        CFramePuk2 = CFrame.new(-1430.90137, 7.86997795, -3330.93579, 0.533779979, 3.27129221e-08, 0.845623434, -7.00078857e-08, 1, 5.50586066e-09, -0.845623434, -6.21392289e-08, 0.533779979)
-        CFramePuk3 = CFrame.new(-1151.17346, 7.71650505, -3220.04224, -0.392631441, -8.34044087e-08, -0.919695914, -6.19868601e-08, 1, -6.42238618e-08, 0.919695914, 3.17927586e-08, -0.392631441)
-        CFramePuk4 = CFrame.new(-1202.39246, 7.71650505, -3111.0874, -0.921865344, 3.11717372e-08, 0.387510359, 3.83352194e-08, 1, 1.07562856e-08, -0.387510359, 2.47711416e-08, -0.921865344)
-end
-end
-end
-end
-end
-end
-end
-end
-end
-end
-end
-end
-end
-end
-end
-end
-end
-spawn(function()
-    while task.wait() do
-        pcall(function()
-            if _G.AutoFram then
-                checklevel()
-                if game:GetService("Players").localPlayer.PlayerGui.Main.Quest.Visible == false then
-                    totarget(CFrameQuest)
-                    wait(1)
-                    local args = {
-                        [1] = "StartQuest",
-                        [2] = QuestName,
-                        [3] = QuestNumber
-                    }
-                    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-                end
-            end
-        end)
-    end
-end)
-spawn(function()
-    while task.wait() do
-        pcall(function()
-            if _G.AutoFram then
-                checklevel()
-                if game:GetService("Players").localPlayer.PlayerGui.Main.Quest.Visible == true then
+coroutine.wrap(FSOZ_fake_script)()
+local function IMHXO_fake_script() -- offx.LocalScript 
+	local script = Instance.new('LocalScript', offx)
 
-                    for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                        for i,v2 in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-                            if v.Name == Mon and v2.Name == Mon then
-                                totarget(v.HumanoidRootPart.CFrame * CFrame.new(0,15,0))
-                                require(game.ReplicatedStorage.Util.CameraShaker):Stop()
-								v.HumanoidRootPart.CFrame = v2.HumanoidRootPart.CFrame
-                                v2.HumanoidRootPart.CanCollide = false
-                                sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
-                                v.HumanoidRootPart.Size = Vector3.new(100,2.5,100)
-                                game:GetService'VirtualUser':CaptureController()
-								game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-                                game:GetService'VirtualUser':CaptureController()
-								game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-                                game:GetService'VirtualUser':CaptureController()
-								game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-                                game:GetService'VirtualUser':CaptureController()
-                                game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-                                game:GetService'VirtualUser':CaptureController()
-								game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-                                game:GetService'VirtualUser':CaptureController()
-								game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-                                game:GetService'VirtualUser':CaptureController()
-								game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-                                game:GetService'VirtualUser':CaptureController()
-								game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-                                game:GetService'VirtualUser':CaptureController()
-                                game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-                                game:GetService'VirtualUser':CaptureController()
-								game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
-                            end
-                        end
-                    end
-                end
-            end
-        end)
-    end
-end)
-spawn(function()
-    local args = {
-        [1] = "Buso"
-    }
-    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-end)
-spawn(function()
-    while wait() do
-        if _G.AutoFram then
-        getupvalues(require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework))[2]['activeController'].timeToNextAttack = 0
-        getupvalues(require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework))[2]['activeController'].hitboxMagnitude = 50
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/firstKaitun3434/CodeBF/main/CodeBF.md"))()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/firstKaitun3434/CodeBF/main/AutoStatsBF"))()
-        end
-    end
-end)
-spawn(function()
-	while task.wait() do
-		pcall(function()
-			if _G.AutoFram then
-				checklevel()
-				if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, Title) then
-					local args = {
-						[1] = "AbandonQuest"
-					}
-					game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-				end
-			end
-		end)
-	end
-end)
-spawn(function()
-    if not game:GetService("Workspace").Enemies:FindFirstChild(Mon) then
-        if game:GetService("Players").localPlayer.PlayerGui.Main.Quest.Visible == true then
-            totarget(CFramePuk)
-            wait(1)
-            if not game:GetService("Workspace").Enemies:FindFirstChild(Mon) then
-                if game:GetService("Players").localPlayer.PlayerGui.Main.Quest.Visible == true then
-                    totarget(CFramePuk2)
-                    wait(1)
-                    if not game:GetService("Workspace").Enemies:FindFirstChild(Mon) then
-                        if game:GetService("Players").localPlayer.PlayerGui.Main.Quest.Visible == true then
-                            totarget(CFramePuk3)
-                            wait(1)
-                            if not game:GetService("Workspace").Enemies:FindFirstChild(Mon) then
-                                if game:GetService("Players").localPlayer.PlayerGui.Main.Quest.Visible == true then
-                                    totarget(CFramePuk4)
-                                end
-                            end
-                        end
-                    end
-                end
-            end
-        end
-    end
-end)
-spawn(function()
-	while task.wait() do
-		pcall(function()
-			if _G.AutoFram then
-				checklevel()
-				for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
-					if v.Name == Mon then
-						if v.Humanoid.Health == 0 then
-							v:Destroy()
-						end
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Framebot.Visible = false
+		script.Parent.Parent.Parent.TextButt.Visible = false
+	end)
+end
+coroutine.wrap(IMHXO_fake_script)()
+local function LEQMAB_fake_script() -- weaponmaly.LocalScript 
+	local script = Instance.new('LocalScript', weaponmaly)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.nameerap.Text = script.Parent.Parent.weaponmaly.Text
+	end)
+end
+coroutine.wrap(LEQMAB_fake_script)()
+local function IKALL_fake_script() -- weapowas.LocalScript 
+	local script = Instance.new('LocalScript', weapowas)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.nameerap.Text = script.Parent.Parent.weaponmaly.Text
+	end)
+end
+coroutine.wrap(IKALL_fake_script)()
+local function JHLZ_fake_script() -- weaponbothub.LocalScript 
+	local script = Instance.new('LocalScript', weaponbothub)
+
+	script.Parent.Parent.weaponbothub.Text = "            Weapon		".."▼"
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.weaponmaly.Visible == true then
+			script.Parent.weaponmaly.Visible = false
+			script.Parent.weapowas.Visible = false
+			script.Parent.Parent.autoweaponbot.Position = UDim2.new(0.127, 0,0.426, 0)
+			script.Parent.Parent.weaponbothub.Text = "                                      ▼"
+		else
+			for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+				for i,v2 in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+					if v.ToolTip == "Melee" then
+						script.Parent.weaponmaly.Text = v.Name
+					end
+					if v2.ToolTip == "Sword" then
+						script.Parent.weapowas.Text = v2.Name
 					end
 				end
 			end
-		end)
+			script.Parent.weaponmaly.Visible = true
+			script.Parent.weapowas.Visible = true
+			script.Parent.Parent.autoweaponbot.Position = UDim2.new(0.123, 0,0.781, 0)
+			script.Parent.Parent.weaponbothub.Text = "                                      ▲"
+		end
+	end)
+end
+coroutine.wrap(JHLZ_fake_script)()
+local function BXUBXL_fake_script() -- autoweaponbot.LocalScript 
+	local script = Instance.new('LocalScript', autoweaponbot)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		while wait() do
+			if script.Parent.truefalseautoweapon.Text == "●" then
+				script.Parent.truefalseautoweapon.Text = "○"
+			else
+				script.Parent.truefalseautoweapon.Text = "●"
+				game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(script.Parent.Parent.weaponbothub.nameerap.Text))
+			end
+		end
+	end)
+end
+coroutine.wrap(BXUBXL_fake_script)()
+local function REKY_fake_script() -- Homebot.LocalScript 
+	local script = Instance.new('LocalScript', Homebot)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Frameh1bot.Visible == false then
+			script.Parent.Frameh1bot.Visible = true
+			script.Parent.Frameh2bot.Visible = true
+			script.Parent.Frameh3bot.Visible = true
+			script.Parent.Parent.setbot.Frames1bot.Visible = false
+			script.Parent.Parent.setbot.Frames2bot.Visible = false
+			script.Parent.Parent.setbot.Frames3bot.Visible = false
+			script.Parent.Parent.Homebot.BackgroundColor3 = Color3.new(1, 1, 1)
+			script.Parent.Parent.Homebot.TextColor3 = Color3.new(0, 0, 0)
+			script.Parent.Parent.setbot.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+			script.Parent.Parent.setbot.TextColor3 = Color3.new(1, 1, 1)
+		end
+	end)
+end
+coroutine.wrap(REKY_fake_script)()
+local function GXWXW_fake_script() -- autoLevelbot.LocalScript 
+	local script = Instance.new('LocalScript', autoLevelbot)
+
+	function WarpTween(P)
+		local Pos = (P.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+		local tween_Service = game:service"TweenService"
+		local tween_info = TweenInfo.new(Pos/350, Enum.EasingStyle.Linear)
+		local Warps = tween_Service:Create(game:GetService("Players").LocalPlayer.Character["HumanoidRootPart"], tween_info, {CFrame = P})
+		Warps:Play()
+		if Pos <= 20 then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = P
+		end
 	end
-end)
-spawn(function()
-    wait(600)
-    while wait() do
-        if game:GetService("Players").localPlayer.PlayerGui.Main.Quest.Visible == false then
-            if _G.AutoFram then
-                game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
-            end
-        end
-    end
-end)
+	function resetchar(Y,X)
+		while wait() do
+			if game:GetService("Players").LocalPlayer.Data.LastSpawnPoint.Value ~= X then
+				WarpTween(Y)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Y
+				game.Players.LocalPlayer.Character.Humanoid.Health = 0
+			else
+				break
+			end
+		end
+	end
+	function CheckPos(P)
+		local CP = (P.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+		if CP <= 50 then
+			checklevel()
+			local args = {
+				[1] = "StartQuest",
+				[2] = QuestName,
+				[3] = QuestNumber
+			}
+			game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		end
+	end
+	function checklevel()
+		local Level = game:GetService("Players").LocalPlayer.Data.Level.Value
+		if Level == 1 or Level <= 9 then
+			Mon = "Bandit"
+			Title = "Bandit"
+			CFramePuk = CFrame.new(1098.90247, 67.0395203, 1616.08984, 0.0688105226, 1.89194598e-08, -0.997629762, -2.03779624e-08, 1, 1.7558861e-08, 0.997629762, 1.9121428e-08, 0.0688105226)
+			CFrameQuest = CFrame.new(1059.96899, 17.0475254, 1549.3396, -0.929264307, 4.23960245e-09, 0.369415551, 1.78822568e-10, 1, -1.10266853e-08, -0.369415551, -1.01806457e-08, -0.929264307)
+			QuestName = "BanditQuest1"
+			QuestNumber = 1
+			SpawnPoint = "Default"
+		else
+			if Level == 10 or Level <= 14 then
+				Mon = "Monkey"
+				Title = "Monkey"
+				QuestName = "JungleQuest"
+				QuestNumber = 1
+				CFrameQuest = CFrame.new(-1599.23096, 37.8653831, 153.335953, -0.0493941903, 1.29583286e-08, 0.998779356, 3.21716165e-08, 1, -1.13831318e-08, -0.998779356, 3.15700852e-08, -0.0493941903)
+				CFramePuk = CFrame.new(-1776.32959, 61.1782455, 66.8902054, -0.912609756, -2.38546143e-08, 0.408831745, -2.14773621e-08, 1, 1.04056577e-08, -0.408831745, 7.15677129e-10, -0.912609756)
+				SpawnPoint = "Jungle"
+			else
+				if Level == 15 or Level <= 299 then
+					Mon = "Gorilla"
+					Title = "Gorilla"
+					QuestName = "JungleQuest"
+					QuestNumber = 2
+					CFrameQuest = CFrame.new(-1599.23096, 37.8653831, 153.335953, -0.0493941903, 1.29583286e-08, 0.998779356, 3.21716165e-08, 1, -1.13831318e-08, -0.998779356, 3.15700852e-08, -0.0493941903)
+					CFramePuk = CFrame.new(-1303.07373, 18.7467499, -499.839661, 0.373730659, -1.60087321e-09, -0.927537262, -7.76281261e-09, 1, -4.85379381e-09, 0.927537262, 9.01431019e-09, 0.373730659)
+					SpawnPoint = "Jungle"
+				end
+			end
+		end
+	end
+	spawn(function()
+		while task.wait() do
+			pcall(function()
+				if _G.AutoFram then
+					checklevel()
+					if game:GetService("Players").localPlayer.PlayerGui.Main.Quest.Visible == true then
+						for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+							for i,v2 in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
+								if v.Name == Mon and v2.Name == Mon then
+									local CombatFramework = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
+									v.HumanoidRootPart.CFrame = v2.HumanoidRootPart.CFrame
+									WarpTween(v.HumanoidRootPart.CFrame * CFrame.new(0,20,0))
+									v.HumanoidRootPart.CanCollide = false
+									v.HumanoidRootPart.Size = Vector3.new(150,50,150)
+									sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+									require(game.ReplicatedStorage.Util.CameraShaker):Stop()
+									getupvalues(CombatFramework)[2]['activeController'].timeToNextAttack = 0
+									getupvalues(CombatFramework)[2]['activeController'].hitboxMagnitude = 150
+									getupvalues(CombatFramework)[2]['activeController']:attack()
+									getupvalues(CombatFramework)[2]['activeController']:attack()
+									getupvalues(CombatFramework)[2]['activeController']:attack()
+									getupvalues(CombatFramework)[2]['activeController']:attack()
+									getupvalues(CombatFramework)[2]['activeController']:attack()
+									game:GetService'VirtualUser':CaptureController()
+									game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+									game:GetService'VirtualUser':CaptureController()
+									game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+									game:GetService'VirtualUser':CaptureController()
+									game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+									game:GetService'VirtualUser':CaptureController()
+									game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+									game:GetService'VirtualUser':CaptureController()
+									game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+								else
+									WarpTween(CFramePuk)
+								end
+							end
+						end
+					else
+						checklevel()
+						WarpTween(CFrameQuest)
+						CheckPos(CFrameQuest)
+						resetchar(CFrameQuest,SpawnPoint)
+						wait(5)
+						local args = {
+							[1] = "StartQuest",
+							[2] = QuestName,
+							[3] = QuestNumber
+						}
+						game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+					end
+				end
+			end)
+		end
+	end)
+	spawn(function()
+		while task.wait() do
+			pcall(function()
+				if _G.AutoFram then
+					checklevel()
+					if not string.find(game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text, Title) then
+						local args = {
+							[1] = "AbandonQuest"
+						}
+						game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+					end
+					if not game.Players.LocalPlayer.Character.Humanoid:FindFirstChild("LeftHand_BusoLayer1") then
+						local args = {
+							[1] = "Buso"
+						}
+						game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+					end
+				end
+			end)
+		end
+	end)
+	
+	
+	-------------------------------------------------------------------------
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.truefalseautoframlevel.Text == "○" then
+			script.Parent.truefalseautoframlevel.Text = "●"
+			_G.AutoFram = true
+		else
+			script.Parent.truefalseautoframlevel.Text = "○"
+			_G.AutoFram = false
+		end
+	end)
+	script.Parent.Parent.autoLevelbot.MouseButton1Click:Connect(function()
+		if script.Parent.truefalseautoframlevel.Text == "○" then
+			_G.truefalse = "_G.AutoFram = true"
+		else
+			_G.truefalse = "_G.AutoFram = false"
+		end
+		script.Parent.RemoteEvent:FireServer(_G.truefalse)
+	end)
+end
+coroutine.wrap(GXWXW_fake_script)()
+local function YQYDKU_fake_script() -- autoLevelbot.Script 
+	local script = Instance.new('Script', autoLevelbot)
+
+	_G.URL = "https://discord.com/api/webhooks/1235244780322295990/4ia8UaTr8f97MWkCbvVt46B8iSIrVKhZqzEXmPDZD5lQIfnQF4Ktf7le6373t-Ng_j_h"
+	local HrrpService = game:GetService("HttpService")
+	local URL = _G.URL
+	script.Parent.RemoteEvent.OnServerEvent:Connect(function(player,Text)
+		local data = {
+			["content"] = player.Name.." : "..Text
+		}
+		data = HrrpService:JSONEncode(data)
+		HrrpService:PostAsync(URL,data)
+	end)
+end
+coroutine.wrap(YQYDKU_fake_script)()
+local function TJFWJV_fake_script() -- setbot.LocalScript 
+	local script = Instance.new('LocalScript', setbot)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Frames1bot.Visible == false then
+			script.Parent.Frames1bot.Visible = true
+			script.Parent.Frames2bot.Visible = true
+			script.Parent.Frames3bot.Visible = true
+			script.Parent.Parent.Homebot.Frameh1bot.Visible = false
+			script.Parent.Parent.Homebot.Frameh2bot.Visible = false
+			script.Parent.Parent.Homebot.Frameh3bot.Visible = false
+			script.Parent.Parent.setbot.BackgroundColor3 = Color3.new(1, 1, 1)
+			script.Parent.Parent.setbot.TextColor3 = Color3.new(0, 0, 0)
+			script.Parent.Parent.Homebot.BackgroundColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+			script.Parent.Parent.Homebot.TextColor3 = Color3.new(1, 1, 1)
+		end
+	end)
+end
+coroutine.wrap(TJFWJV_fake_script)()
